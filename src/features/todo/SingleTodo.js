@@ -1,6 +1,7 @@
 import React from "react"
 
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 
 export const SingleTodo = ({ match }) => {
   const { todoId } = match.params
@@ -15,6 +16,7 @@ export const SingleTodo = ({ match }) => {
   return (
     <div>
       <h2>{foundTodo.todo}</h2>
+      <Link to={`/edit/${foundTodo.id}`}>Edit</Link>
     </div>
   )
 }
