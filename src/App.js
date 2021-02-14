@@ -2,6 +2,7 @@ import "./App.css"
 
 import { InsertTodo } from "./features/todo/InsertTodo"
 import { TodoList } from "./features/todo/TodoList"
+import { SingleTodo } from "./features/todo/SingleTodo"
 import { Navbar } from "./Navbar"
 
 import {
@@ -27,6 +28,7 @@ function App() {
               </>
             )}
           />
+          <Route exact path="/todo/:todoId" component={SingleTodo} />
           <Redirect to="/" />
         </Switch>
       </Router>
