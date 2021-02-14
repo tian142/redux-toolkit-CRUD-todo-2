@@ -10,7 +10,11 @@ export const InsertTodo = () => {
 
   const dispatch = useDispatch()
 
-  const onAddTodo = () => dispatch(addTodo(todo))
+  const onAddTodo = () => {
+    dispatch(addTodo(todo))
+
+    setTodo("")
+  }
 
   return (
     <div>
